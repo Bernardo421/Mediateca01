@@ -1,0 +1,154 @@
+:root{
+    --color-primario: #0a1128;
+    --color-secundario: #182b70;
+    --color-trciaria: #cfdaeb;
+    --color-texto: #ffffff;
+    --color-fundo: #b5c0d0;
+    --color-boton: #083766;
+    --color-boton-hover: #1C86EE;
+    --color-error: #FF0000;
+} 
+*{
+
+}
+/* ÁREA do body */
+body{
+    position: relative;
+    background-image: linear-gradient(180deg, var(--color-secundario), var(--color-primario));
+    width: 98vw;
+    height: 97.5vh;
+}
+.login-container{
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: transparent;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+}
+.login-container >a> img{
+    display: block;
+    margin: auto;
+    width: 150px;
+    margin-bottom: 20px;
+}
+/* ÁREA dos inputs */
+.login-container input[type="text"]{
+    justify-content: center;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 250px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-fundo);
+    color: var(--color-primario);
+    outline-color: var(--color-boton-hover);
+}
+
+.login-container input[type="password"]{
+    justify-content: center;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 250px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-fundo);
+    color: var(--color-primario);
+    outline-color: var(--color-boton-hover);
+}
+.login-container input[type="email"]{
+    justify-content: center;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 250px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-fundo);
+    color: var(--color-primario);
+    outline-color: var(--color-boton-hover);
+}
+.login-container input[type="date"]{
+    justify-content: center;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 250px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-fundo);
+    color: var(--color-primario);
+    outline-color: var(--color-boton-hover);
+}
+.login-container input[type="tel"]{
+
+     justify-content: center;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 250px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-fundo);
+    color: var(--color-primario);
+    outline-color: var(--color-boton-hover);
+    
+}
+.input-container{
+    position: relative;
+}
+.input-container label{
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    color: var(--color-primario);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+input:focus + label,
+input:not(:placeholder-shown) + label{
+    transform: translateY(-150%);
+    top: 53%;
+    left: 20%;
+    font-size: 12px;
+    color: var(--color-boton);
+}
+.input-container section{
+   
+    justify-content: center;
+}
+.genero{
+   background-color: var(--color-fundo);
+   color: var(--color-primario);
+   padding: 5px;
+   display: block;
+   margin-left: 16%;
+   border-radius: 5px;
+   margin-bottom: 5px;
+}
+/* ÁREA do botão */
+.login-container button{
+    display: block;
+    margin: auto; 
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-boton);
+    color: var(--color-texto);
+    cursor: pointer;
+    position: relative; 
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar-se | ARCHIVA</title>~
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="login-container">
+        <a href="login.html"><img src="img/logo.png" alt="Imagen de logo"></a>
+        <form action="">
+            <div class="input-container">
+                <input type="text" id="name" placeholder=" " required>
+                <label for="name">Nome completo</label>
+            </div>
+            <div class="input-container">
+                <input type="text" id="username" placeholder=" " required>
+                <label for="username">Nome de usuário</label>
+            </div>
+            <div class="input-container">
+                <input type="email" id="email" placeholder=" " required>
+                <label for="email">Digitar Email</label>
+            </div>
+            <div class="input-container">
+                <input type="tel" id="phone" placeholder=" " required>
+                <label for="phone">Número de tel</label>
+            </div>
+            <div class="input-container">
+                <input type="date" id="birthdate" placeholder=" " required>
+                <label for="birthdate">Data de nascimento</label>
+            </div>
+            <div class="input-container">
+                <input type="text" id="numero" placeholder=" " required>
+                <label for="numero">Número de BI</label>
+            </div>
+            <div class="input-container">
+                <select class="genero" id="genero" name="genero" required>
+                    <option value="">Gênero</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <input type="password" id="password" placeholder=" " minlength="8" maxlength="16"  required>
+                <label for="password">Criar Senha</label>
+            </div>
+            <div class="input-container">
+                <input type="password" id="confirm-password" placeholder=" " minlength="8" maxlength="16"  required>
+                <label for="confirm-password">Confirmar Senha</label>
+            </div>
+            <button>Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
