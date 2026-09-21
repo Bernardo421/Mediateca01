@@ -14,7 +14,7 @@
 /* ÁREA do body */
 body{
     position: relative;
-    background-image: url("../img/fundo1.jpeg");
+    background-image: url("../img/fundo1.png");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -48,8 +48,8 @@ input[type="email"], input[type="password"]{
     display: block;
     margin: auto;
     margin-bottom: 10px;
-    width: 400px;
-    padding: 12px;
+    width: 300px;
+    padding: 15px;
     border: none;
     border-radius: 5px;
     background-color: var(--color-fundo);
@@ -64,7 +64,7 @@ input[type="email"], input[type="password"]{
     border-radius: 5px;
     position: absolute;
     top: 50%;
-    left: 23%;
+    left: 17%;
     transform: translate(-50%, -50%);
     color: var(--color-primario);
     pointer-events: none;
@@ -74,7 +74,7 @@ input:focus + label,
 input:not(:placeholder-shown) + label{
     transform: translateY(-150%);
     top: 53%;
-    left: 20%;
+    left: 15%;
     font-size: 12px;
     color: var(--color-boton);
 }
