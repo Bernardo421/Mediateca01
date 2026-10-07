@@ -24,7 +24,7 @@ header{
     text-align: center;
 }
 .container{
-    max-width: 800px;
+    
     margin: 0 auto;
     padding: 20px;
     background-image: linear-gradient(to bottom, var(--color-secundario), var(--color-trciaria));
