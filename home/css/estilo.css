@@ -18,13 +18,21 @@ body{
 
 }
 header{
+    position: relative;
     background-color: var(--color-secundario);
     color: var(--color-texto);
     padding: 20px;
-    text-align: center;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav > a{
+    text-decoration: none;
+    color: var(--color-texto);
 }
 .container{
-    
     margin: 0 auto;
     padding: 20px;
     background-image: linear-gradient(to bottom, var(--color-secundario), var(--color-trciaria));
