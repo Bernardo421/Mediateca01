@@ -10,21 +10,20 @@
 <body>
     <div class="login-container">
         <img src="img/logo.png" alt="Imagen de logo">
-        <form action="../home/home.html" method="set">
+        <form action="../home/home.html" method="post">
             <div class="input-container">
-                <input type="email" id="username" nome="email" placeholder=" " required>
+                <input type="email" id="username" placeholder=" " required>
                 <label for="username">Email</label>
             </div>
             <div class="input-container">
-                <input type="password" id="password" placeholder=" " minlength="8" maxlength="16"  required>
-                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder=" " minlength="8" maxlength="16" required>
+                <label for="password" >Senha</label>
             </div>
-            <button>Entrar</button>
+            <button type="submit" class="btn-principal">Entrar</button>
         </form>
-        <a href="#">Esqueceu a senha?</a>
+        <a href="#" class="link">Esqueceu a senha?</a>
         <br>
-        <a href="cadastro.html"><button>Criar Conta</button></a>
-    </div>
-    
+        <a href="cadastro.html" class="btn-secundario">Criar Conta</a>
+    </fieldset>
 </body>
 </html>

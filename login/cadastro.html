@@ -8,31 +8,31 @@
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
 <body>
-    <div class="login-container">
+    <fieldset class="login-container">
         <a href="login.html"><img src="img/logo.png" alt="Imagen de logo"></a>
         <form action="">
             <div class="input-container">
-                <input type="text" id="name" placeholder=" " required>
+                <input type="text" name="name" id="name" maxlength="30" autocomplete="name" placeholder=" " required>
                 <label for="name">Nome completo</label>
             </div>
             <div class="input-container">
-                <input type="text" id="username" placeholder=" " required>
+                <input type="text" name="username" id="username" maxlength="20" autocomplete="username" placeholder=" " required>
                 <label for="username">Nome de usuário</label>
             </div>
             <div class="input-container">
-                <input type="email" id="email" placeholder=" " required>
+                <input type="email" name="email" id="email" maxlength="100" autocomplete="email" placeholder=" " required>
                 <label for="email">Digitar Email</label>
             </div>
             <div class="input-container">
-                <input type="tel" id="phone" placeholder=" " required>
+                <input type="tel" name="phone" id="phone"  maxlength="15" autocomplete="tel" placeholder=" "pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required>
                 <label for="phone">Número de tel</label>
             </div>
             <div class="input-container">
-                <input type="date" id="birthdate" placeholder=" " required>
+                <input type="date" name="birthdate" id="birthdate" autocomplete="bday" placeholder=" " required>
                 <label for="birthdate">Data de nascimento</label>
             </div>
             <div class="input-container">
-                <input type="text" id="numero" placeholder=" " required>
+                <input type="text" name="numero"  id="numero" min="9" max="20" placeholder=" " required>
                 <label for="numero">Número de BI</label>
             </div>
             <div class="input-container">
@@ -53,6 +53,6 @@
             </div>
             <button>Cadastrar</button>
         </form>
-    </div>
+    </fieldset>
 </body>
 </html>
