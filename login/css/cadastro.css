@@ -1,151 +1,91 @@
-:root{
+:root {
     --color-primario: #0a1128;
     --color-secundario: #182b70;
-    --color-trciaria: #cfdaeb;
+    --color-terciaria: #cfdaeb;
     --color-texto: #ffffff;
     --color-fundo: #bcc9db;
     --color-boton: #083766;
     --color-boton-hover: #1C86EE;
     --color-error: #FF0000;
-} 
-*{
-
+    --color-confirmacao: #00FF00;
 }
-/* ÁREA do body */
-body{
-    position: relative;
-    background-image:url(../img/fundo1.png);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-image: url("../img/fundo1.png");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    width: 98vw;
-    height: 97.5vh;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.login-container{
+
+/* Container */
+.login-container {
     padding: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background-color: transparent;
+    width: 100%;
+    max-width: 400px;
+    background-color: #17425b86;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-
+    text-align: center;
 }
-.login-container >a> img{
-    display: block;
-    margin: auto;
+
+/* Logo */
+.login-container img {
     width: 150px;
-    margin-bottom: 20px;
-}
-/* ÁREA dos inputs */
-.login-container input[type="text"]{
-    justify-content: center;
+    margin: 0 auto 20px auto;
     display: block;
-    margin: auto;
-    margin-bottom: 10px;
-    width: 300px;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--color-fundo);
-    color: var(--color-primario);
-    outline-color: var(--color-boton-hover);
 }
 
-.login-container input[type="password"]{
-    justify-content: center;
-    display: block;
-    margin: auto;
-    margin-bottom: 10px;
-    width: 300px;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--color-fundo);
-    color: var(--color-primario);
-    outline-color: var(--color-boton-hover);
-}
-.login-container input[type="email"]{
-    justify-content: center;
-    display: block;
-    margin: auto;
-    margin-bottom: 10px;
-    width: 300px;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--color-fundo);
-    color: var(--color-primario);
-    outline-color: var(--color-boton-hover);
-}
-.login-container input[type="date"]{
-    justify-content: center;
-    display: block;
-    margin: auto;
-    margin-bottom: 10px;
-    width: 300px;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--color-fundo);
-    color: var(--color-primario);
-    outline-color: var(--color-boton-hover);
-}
-.login-container input[type="tel"]{
-
-     justify-content: center;
-    display: block;
-    margin: auto;
-    margin-bottom: 10px;
-    width: 300px;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--color-fundo);
-    color: var(--color-primario);
-    outline-color: var(--color-boton-hover);
-    
-}
-.input-container{
+/* Inputs e Select */
+.input-container {
     position: relative;
+    margin-bottom: 10px;
 }
-.input-container label{
+
+input, select {
+    width: 100%;
+    padding: 15px;
+    border: none;
     border-radius: 5px;
+    background-color: white;
+    color: var(--color-primario);
+    outline-color: var(--color-boton-hover);
+}
+
+.input-container label {
     position: absolute;
     top: 50%;
-    left: 24%;
-    transform: translate(-50%, -50%);
+    left: 15px;
+    transform: translateY(-50%);
     color: var(--color-primario);
     pointer-events: none;
     transition: all 0.3s ease;
 }
+
 input:focus + label,
-input:not(:placeholder-shown) + label{
-    transform: translateY(-150%);
-    top: 53%;
-    left: 14%;
+input:not(:placeholder-shown) + label {
+    top: 7px;
+    left: 10px;
     font-size: 12px;
     color: var(--color-boton);
 }
-.input-container section{
-   
-    justify-content: center;
-}
-.genero{
-   background-color: var(--color-fundo);
-   color: var(--color-primario);
-   padding: 5px;
-   display: block;
-   margin-left: 16%;
-   border-radius: 5px;
-   margin-bottom: 5px;
-}
-/* ÁREA do botão */
-.login-container button{
+
+/* Botão */
+.login-container button {
+    position: relative;
     display: block;
-    margin: auto; 
+    margin: 20px auto;
     width: 200px;
     padding: 10px;
     border: none;
@@ -153,5 +93,28 @@ input:not(:placeholder-shown) + label{
     background-color: var(--color-boton);
     color: var(--color-texto);
     cursor: pointer;
-    position: relative; 
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.login-container button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--color-confirmacao);
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+.login-container button:hover::before {
+    width: 100%;
+}
+
+.login-container button:hover {
+    color: var(--color-texto);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
