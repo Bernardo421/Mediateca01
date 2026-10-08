@@ -150,3 +150,11 @@ input:not(:placeholder-shown) + label {
     color: var(--color-texto);
     text-decoration: underline;
 }
+.btn-principal:hover, .btn-secundario:hover {
+    color: var(--color-texto);
+}
+.center-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
