@@ -4,7 +4,7 @@
     --color-terciaria: #cfdaeb;
     --color-texto: #ffffff;
     --color-fundo: #b5c0d0;
-    --color-boton: #083766;
+    --color-boton: #062e55;
     --color-boton-hover: #1C86EE;
     --color-error: #FF0000;
     --color-confirmacao: #00FF00;
@@ -99,6 +99,7 @@ input:not(:placeholder-shown) + label {
     overflow: hidden;
     z-index: 1;
     transition: color 0.3s ease;
+    
 }
 
 .btn-principal::before {
@@ -139,22 +140,31 @@ input:not(:placeholder-shown) + label {
 
 .btn-secundario:hover::before {
     width: 100%; 
+    
 }
-
+.btn-principal:hover, .btn-secundario:hover {
+    color: var(--color-texto);
+    
+}
 
 
 /* Links */
 .link {
     display: block;
+    margin: auto;
     margin-top: 10px;
     color: var(--color-texto);
-    text-decoration: underline;
+    text-decoration: none;
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
 }
-.btn-principal:hover, .btn-secundario:hover {
+.link:hover {
+    background-color: #b5c0d0;
+   
+}
+.dizer {
     color: var(--color-texto);
-}
-.center-label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
