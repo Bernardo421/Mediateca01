@@ -153,8 +153,8 @@ input:not(:placeholder-shown) + label {
 .btn-principal:hover, .btn-secundario:hover {
     color: var(--color-texto);
 }
-.center-label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.para {
+    color: var(--color-texto);
+    font-size: 14px;
+    margin-top: 10px;
 }
