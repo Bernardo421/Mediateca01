@@ -1,58 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-BR" method="post">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar-se | ARCHIVA</title>~
+    <title>Cadastro | ARCHIVA</title>
     <link rel="stylesheet" href="css/cadastro.css">
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
 <body>
-    <fieldset class="login-container">
-        <a href="login.html"><img src="img/logo.png" alt="Imagen de logo"></a>
-        <form action="">
-            <div class="input-container">
-                <input type="text" name="name" id="name" maxlength="30" autocomplete="name" placeholder=" " required>
-                <label for="name">Nome completo</label>
+    <div class="conteiner">
+        <form action="" method="post">
+            <div>
+                <label for="userName">Nome de utilizador</label>
+                <input type="text" autocomplete="cc-name" placeholder=" " required>
             </div>
-            <div class="input-container">
-                <input type="text" name="username" id="username" maxlength="20" autocomplete="username" placeholder=" " required>
-                <label for="username">Nome de usuário</label>
+            <div>
+                <label for="dataDeNascimento">Data de nascimento</label>
+                <input type="date" autocomplete="bday-year" placeholder=" " required>
             </div>
-            <div class="input-container">
-                <input type="email" name="email" id="email" maxlength="100" autocomplete="email" placeholder=" " required>
-                <label for="email">Digitar Email</label>
-            </div>
-            <div class="input-container">
-                <input type="tel" name="phone" id="phone"  maxlength="15" autocomplete="tel" placeholder=" "pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required>
-                <label for="phone">Número de tel</label>
-            </div>
-            <div class="input-container">
-                <input type="date" name="birthdate" id="birthdate" autocomplete="bday" placeholder=" " required>
-                <label for="birthdate">Data de nascimento</label>
-            </div>
-            <div class="input-container">
-                <input type="text" name="numero"  id="numero" min="9" max="20" placeholder=" " required>
-                <label for="numero">Número de BI</label>
-            </div>
-            <div class="input-container">
-                <select class="genero" id="genero" name="genero" required>
-                    <option value="">Gênero</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="feminino">Feminino</option>
-                    <option value="outro">Outro</option>
+            <div>
+                <label for="genero">Genero</label>
+                <select>
+                    <option value="masc">Masculino</option>
+                    <option value="fem">Femenino</option>
+                    <option value="pers">Personalizado</option>
                 </select>
             </div>
-            <div class="input-container">
-                <input type="password" id="password" placeholder=" " minlength="8" maxlength="16"  required>
-                <label for="password">Criar Senha</label>
+            <div>
+                <label for="numero">Numero de telefone</label>
+                <input type="number" autocomplete="cc-number" placeholder=" " required>
             </div>
-            <div class="input-container">
-                <input type="password" id="confirm-password" placeholder=" " minlength="8" maxlength="16"  required>
-                <label for="confirm-password">Confirmar Senha</label>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" autocomplete="email" placeholder=" " required>
             </div>
-            <button>Cadastrar</button>
+            <div> 
+                <label for="senha">Senha</label>
+                <input type="password" required>
+            </div>
+            <button>Enviar</button>
         </form>
-    </fieldset>
+    </div>
 </body>
 </html>

@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | ARCHIVA</title>
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <div class="login-container">
-        <img src="img/logo.png" alt="Imagen de logo">
-        <form action="../home/home.html" method="post">
-            <div class="input-container">
-                <input type="email" id="username" placeholder=" " required>
-                <label for="username">Email</label>
-            </div>
-            <div class="input-container">
-                <input type="password" id="password" name="password" placeholder=" " minlength="8" maxlength="16" required>
-                <label for="password" >Senha</label>
-            </div>
-            <button type="submit" class="btn-principal">Entrar</button>
-        </form>
-        <a href="esqueci.html" class="link">Esqueceu a senha?</a>
-        <br>
-        <a href="cadastro.html" class="btn-secundario">Criar Conta</a>
-    </fieldset>
+    <section class="secao1">
+        <img src="../img/logop.png" class="logo" alt="Logo do site" loading="lazy">
+        <img src="../img/Designer (6).png" class="panfleto" alt="Imagen de logo" loading="lazy">
+
+    </section>
+    <section class="secao2">
+        <div class="login-container">
+            <h3>Iniciar sessão no ARCHIVA</h3>
+            <form action="../home/home.html" method="post">
+                <div class="input-container">
+                    <input type="email" id="username" placeholder=" " required>
+                    <label for="username">Email</label>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="password" name="password" placeholder=" " minlength="8" maxlength="16" required>
+                    <label for="password" >Senha</label>
+                </div>
+                <button type="submit" class="btn-principal">Entrar</button>
+            </form>
+            <a href="esqueci.html" class="link-esqueci">Esqueceu a senha?</a>
+            <br>
+            <a href="cadastro.html" class="cadastrar">Criar Conta</a>
+        </div>
+
+    </section>
+    
 </body>
 </html>

@@ -1,0 +1,142 @@
+:root {
+    --color-primario: #0a1128;
+    --color-secundario: #182b70;
+    --color-terciaria: #ecefe1;
+    --color-texto: #ffffff;
+    --color-fundo: #bcc9db;
+    --color-boton: #083766;
+    --color-boton-hover: #0a89eb;
+    --color-error: #FF0000;
+    --color-confirmacao: #008000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-terciaria);
+}
+.secao1{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  
+}
+.logo{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+}
+.secao1 .panfleto{
+    display: block;
+   margin: 0 auto;
+   position: relative;
+   animation: mover 3s infinite alternate; 
+  
+   
+} @keyframes mover{
+    from{top: -5px ;}
+    to {top:60px;}
+   }
+.secao2{
+    width: 50%;
+    height: 100vh;
+    background-color: var(--color-primario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container{
+    
+}
+.login-container h3{
+    text-align: left;
+    color: var(--color-terciaria);
+}
+
+.input-container{
+   position: relative;
+}
+.input-container input{
+    margin: 10px auto;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    font-size: large;
+    outline-color: var(--color-boton-hover);
+
+}
+.input-container input:hover{
+    border: 2px solid grey;
+}
+label{
+    font-size: larger;
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    transition: all 0.5s ease;
+}
+input:focus + label,
+input:not(:placeholder-shown) + label{
+    top:3% ;
+    font-size: 0.8em;
+    color: var(--color-boton-hover);
+}
+.login-container button{
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--color-boton-hover);
+    color: var(--color-terciaria);
+    font-size: larger;
+}
+.login-container  button:hover{
+    background-color: var(--color-boton-hover);
+    color: var(--color-terciaria);
+}
+.link-esqueci{
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 200px;
+    text-decoration: none;
+    color: var(--color-terciaria);
+    border-radius: 10px;
+    padding: 10px;
+}
+.link-esqueci:hover{
+    background-color: rgba(240, 255, 255, 0.141);
+}
+.cadastrar{
+     display: block;
+    margin: auto;
+    text-align: center;
+    width: 200px;
+    text-decoration: none;
+    background-color: var(--color-terciaria);
+    color: var(--color-primario);
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+.cadastrar:hover{
+    background-color: green;
+    text-shadow: 2px 4px 8px var(--color-terciaria);
+    color: var(--color-terciaria);
+
+}

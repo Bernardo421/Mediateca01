@@ -1,13 +1,13 @@
 :root {
     --color-primario: #0a1128;
     --color-secundario: #182b70;
-    --color-terciaria: #cfdaeb;
+    --color-terciaria: #ecefe1;
     --color-texto: #ffffff;
     --color-fundo: #bcc9db;
     --color-boton: #083766;
-    --color-boton-hover: #1C86EE;
+    --color-boton-hover: #0a89eb;
     --color-error: #FF0000;
-    --color-confirmacao: #00FF00;
+    --color-confirmacao: #008000;
 }
 
 * {
@@ -15,107 +15,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Body */
-body {
-    background-image: url("../img/fundo1.png");
-    background-size: cover;
-    background-attachment: fixed;
+body{
+    background-image: linear-gradient(260deg , var(--color-primario), var(--color-terciaria));
+    background-repeat: no-repeat;
     background-position: center;
-    width: 100vw;
+    background-size: cover;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Container */
-.login-container {
-    padding: 20px;
-    width: 100%;
-    max-width: 400px;
-    background-color: #17425b86;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    border:none;
-    text-align: center;
-}
-
-/* Logo */
-.login-container img {
-    width: 150px;
-    margin: 0 auto 20px auto;
-    display: block;
-}
-
-/* Inputs e Select */
-.input-container {
-    position: relative;
-    margin-bottom: 10px;
-}
-
-input, select {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: white;
-    color: var(--color-primario);
-    outline-color: var(--color-boton-hover);
-}
-
-.input-container label {
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    color: var(--color-primario);
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-input:focus + label,
-input:not(:placeholder-shown) + label {
-    top: 7px;
-    left: 10px;
-    font-size: 12px;
-    color: var(--color-boton);
-}
-
-/* Botão */
-.login-container button {
-    position: relative;
-    display: block;
-    margin: 20px auto;
-    width: 200px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--color-boton);
-    color: var(--color-texto);
-    cursor: pointer;
-    overflow: hidden;
-    z-index: 1;
-    transition: color 0.3s ease;
-}
-
-.login-container button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: var(--color-confirmacao);
-    transition: width 0.4s ease;
-    z-index: -1;
-}
-
-.login-container button:hover::before {
-    width: 100%;
-}
-
-.login-container button:hover {
-    color: var(--color-texto);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
