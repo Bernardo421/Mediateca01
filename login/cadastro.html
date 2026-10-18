@@ -1,44 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro | ARCHIVA</title>
     <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
 <body>
-    <div class="conteiner">
-        <form action="" method="post">
-            <div>
-                <label for="userName">Nome de utilizador</label>
-                <input type="text" autocomplete="cc-name" placeholder=" " required>
-            </div>
-            <div>
-                <label for="dataDeNascimento">Data de nascimento</label>
-                <input type="date" autocomplete="bday-year" placeholder=" " required>
-            </div>
-            <div>
-                <label for="genero">Genero</label>
-                <select>
-                    <option value="masc">Masculino</option>
-                    <option value="fem">Femenino</option>
-                    <option value="pers">Personalizado</option>
-                </select>
-            </div>
-            <div>
-                <label for="numero">Numero de telefone</label>
-                <input type="number" autocomplete="cc-number" placeholder=" " required>
-            </div>
-            <div>
-                <label for="email">Email</label>
-                <input type="email" autocomplete="email" placeholder=" " required>
-            </div>
-            <div> 
-                <label for="senha">Senha</label>
-                <input type="password" required>
-            </div>
-            <button>Enviar</button>
-        </form>
-    </div>
+    <section class="secao1">
+        <div class="container">
+            <h3>Criar conta no ARCHIVA</h3>
+            <form action="" method="post">
+                <div class="input-container">
+                    <input type="text" id="userName" name="username"  autocomplete="username" placeholder=" " required>
+                    <label for="userName">Nome de utilizador</label>
+                </div>
+                <div class="input-container">
+                    <input type="date" autocomplete="bday" id="dataDeNascimento" name="data_de_nascimento" placeholder=" " required>
+                    <label for="dataDeNascimento">Data de nascimento</label>
+                </div>
+                <div class="input-container">
+                    
+                    <select id="genero" required>
+                        <option value="" disabled selected>Genero</option>
+                        <option value="masc">Masculino</option>
+                        <option value="fem">Femenino</option>
+                        <option value="pers">Personalizado</option>
+                    </select>
+                    <label for="genero"></label>
+                </div>
+                <div class="input-container">
+                    <input type="tel" autocomplete="tel" id="numero" name="inumero" placeholder=" " required>
+                     <label for="numero">Numero de telefone</label>
+                </div>
+                <div class="input-container">
+                    <input type="email" autocomplete="email" id="email" name="iemail" placeholder=" " required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-container">
+                    <input type="password" placeholder=" " id="senha" name="isenha" required>
+                     <label for="senha">Senha</label>
+                </div>
+                 <div class="input-container">
+                    <input type="password" placeholder=" " id="csenha" name="Confsenha" required>
+                    <label for="csenha">Confirmar senha</label>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+</section>
+<section class="secao2">
+
+</section>
 </body>
 </html>

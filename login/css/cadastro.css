@@ -16,9 +16,69 @@
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(260deg , var(--color-primario), var(--color-terciaria));
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    display: flex;
+}
+.secao1{
+    background-color: var(--color-primario);
+    width: 50%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.secao2{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container h3{
+    text-align: left;
+    color: var(--color-terciaria);
+}
+.input-container{
+    position: relative;
+}
+.input-container input, select{
+    margin: 10px auto;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    font-size: large;
+    outline-color: var(--color-boton-hover);
+}
+.input-container input:hover{
+    border: 2px solid gray;
+}
+label{
+    font-size: larger;
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    transition: all 0.3s ease;
+}
+input:focus + label,
+input:not(:placeholder-shown) + label{
+    top: 13%;
+    font-size: 0.8em;
+    color: var(--color-boton-hover);
+
+}
+.container button{
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--color-boton);
+    color: var(--color-terciaria);
+    font-size: larger;
+}
+.container  button:hover{
+    background-color: var(--color-boton-hover);
+    color: var(--color-terciaria);
 }

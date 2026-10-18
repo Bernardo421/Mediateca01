@@ -35,7 +35,7 @@ body{
     left: 3%;
 }
 .secao1 .panfleto{
-    display: block;
+   display: block;
    margin: 0 auto;
    position: relative;
    animation: mover 3s infinite alternate; 
@@ -101,7 +101,7 @@ input:not(:placeholder-shown) + label{
     height: 40px;
     border-radius: 10px;
     border: none;
-    background-color: var(--color-boton-hover);
+    background-color: var(--color-boton);
     color: var(--color-terciaria);
     font-size: larger;
 }
