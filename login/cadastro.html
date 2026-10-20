@@ -17,11 +17,14 @@
                     <label for="userName">Nome de utilizador</label>
                 </div>
                 <div class="input-container">
-                    <input type="date" autocomplete="bday" id="dataDeNascimento" name="data_de_nascimento" placeholder=" " required>
-                    <label for="dataDeNascimento">Data de nascimento</label>
+                    <input type="date" autocomplete="bday" id="data" name="data_de_nascimento" placeholder=" " required>
+                    <label for="data">Data de nascimento</label>
+                </div>
+                 <div class="input-container">
+                    <input type="text" placeholder=" " id="nBI" name="identidade" pattern="[0-9]{9}[A-Z]{2}[0-9]{3}" required>
+                     <label for="nBI">Numero de BI</label>
                 </div>
                 <div class="input-container">
-                    
                     <select id="genero" required>
                         <option value="" disabled selected>Genero</option>
                         <option value="masc">Masculino</option>
@@ -39,11 +42,11 @@
                     <label for="email">Email</label>
                 </div>
                 <div class="input-container">
-                    <input type="password" placeholder=" " id="senha" name="isenha" required>
+                    <input type="password" placeholder=" " id="senha" min="8" max="16" name="isenha" required>
                      <label for="senha">Senha</label>
                 </div>
                  <div class="input-container">
-                    <input type="password" placeholder=" " id="csenha" name="Confsenha" required>
+                    <input type="password" placeholder=" " id="csenha" min="8" max="16" name="Confsenha" required>
                     <label for="csenha">Confirmar senha</label>
                 </div>
                 <button type="submit">Enviar</button>
@@ -51,7 +54,10 @@
         </div>
 </section>
 <section class="secao2">
+    <img src="../img/logop.png" class="logo" alt="Logo do site" loading="lazy">
+    <img src="../img/Designer (7).png" class="panfleto" alt="Panfleto do site" loading="lazy">
 
 </section>
+<script src="js/condi.js"></script>
 </body>
 </html>

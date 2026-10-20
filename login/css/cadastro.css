@@ -26,13 +26,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-.secao2{
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .container h3{
     text-align: left;
     color: var(--color-terciaria);
@@ -81,4 +74,30 @@ input:not(:placeholder-shown) + label{
 .container  button:hover{
     background-color: var(--color-boton-hover);
     color: var(--color-terciaria);
+}
+.secao2{
+     position: relative;
+     width: 50%;
+    height: 100vh;
+    background-color: var(--color-terciaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.secao2 .logo{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+
+}
+.secao2 .panfleto{
+     display: block;
+   margin: 0 auto;
+   position: relative;
+   animation: mover 3s infinite alternate; 
+  
+   
+} @keyframes mover{
+    from{top: -5px ;}
+    to {top:60px;}
 }
