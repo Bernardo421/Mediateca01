@@ -1,58 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-BR" method="post">
+<html lang="Pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar-se | ARCHIVA</title>~
+    <title>Cadastro | ARCHIVA</title>
     <link rel="stylesheet" href="css/cadastro.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
 <body>
-    <fieldset class="login-container">
-        <a href="login.html"><img src="img/logo.png" alt="Imagen de logo"></a>
-        <form action="">
-            <div class="input-container">
-                <input type="text" name="name" id="name" maxlength="30" autocomplete="name" placeholder=" " required>
-                <label for="name">Nome completo</label>
-            </div>
-            <div class="input-container">
-                <input type="text" name="username" id="username" maxlength="20" autocomplete="username" placeholder=" " required>
-                <label for="username">Nome de usuário</label>
-            </div>
-            <div class="input-container">
-                <input type="email" name="email" id="email" maxlength="100" autocomplete="email" placeholder=" " required>
-                <label for="email">Digitar Email</label>
-            </div>
-            <div class="input-container">
-                <input type="tel" name="phone" id="phone"  maxlength="15" autocomplete="tel" placeholder=" "pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required>
-                <label for="phone">Número de tel</label>
-            </div>
-            <div class="input-container">
-                <input type="date" name="birthdate" id="birthdate" autocomplete="bday" placeholder=" " required>
-                <label for="birthdate">Data de nascimento</label>
-            </div>
-            <div class="input-container">
-                <input type="text" name="numero"  id="numero" min="9" max="20" placeholder=" " required>
-                <label for="numero">Número de BI</label>
-            </div>
-            <div class="input-container">
-                <select class="genero" id="genero" name="genero" required>
-                    <option value="">Gênero</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="feminino">Feminino</option>
-                    <option value="outro">Outro</option>
-                </select>
-            </div>
-            <div class="input-container">
-                <input type="password" id="password" placeholder=" " minlength="8" maxlength="16"  required>
-                <label for="password">Criar Senha</label>
-            </div>
-            <div class="input-container">
-                <input type="password" id="confirm-password" placeholder=" " minlength="8" maxlength="16"  required>
-                <label for="confirm-password">Confirmar Senha</label>
-            </div>
-            <button>Cadastrar</button>
-        </form>
-    </fieldset>
+    <section class="secao1">
+        <div class="container">
+            <h3>Criar conta no ARCHIVA</h3>
+            <form action="" method="post">
+                <div class="input-container">
+                    <input type="text" id="userName" name="username"  autocomplete="username" placeholder=" " required>
+                    <label for="userName">Nome de utilizador</label>
+                </div>
+                <div class="input-container">
+                    <input type="date" autocomplete="bday" id="data" name="data_de_nascimento" placeholder=" " required>
+                    <label for="data">Data de nascimento</label>
+                </div>
+                 <div class="input-container">
+                    <input type="text" placeholder=" " id="nBI" name="identidade" pattern="[0-9]{9}[A-Z]{2}[0-9]{3}" required>
+                     <label for="nBI">Numero de BI</label>
+                </div>
+                <div class="input-container">
+                    <select id="genero" required>
+                        <option value="" disabled selected>Genero</option>
+                        <option value="masc">Masculino</option>
+                        <option value="fem">Femenino</option>
+                        <option value="pers">Personalizado</option>
+                    </select>
+                    <label for="genero"></label>
+                </div>
+                <div class="input-container">
+                    <input type="tel" autocomplete="tel" id="numero" name="inumero" placeholder=" " required>
+                     <label for="numero">Numero de telefone</label>
+                </div>
+                <div class="input-container">
+                    <input type="email" autocomplete="email" id="email" name="iemail" placeholder=" " required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-container">
+                    <input type="password" placeholder=" " id="senha" min="8" max="16" name="isenha" required>
+                     <label for="senha">Senha</label>
+                </div>
+                 <div class="input-container">
+                    <input type="password" placeholder=" " id="csenha" min="8" max="16" name="Confsenha" required>
+                    <label for="csenha">Confirmar senha</label>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+</section>
+<section class="secao2">
+    <img src="../img/logop.png" class="logo" alt="Logo do site" loading="lazy">
+    <img src="../img/Designer (7).png" class="panfleto" alt="Panfleto do site" loading="lazy">
+
+</section>
+<script src="js/condi.js"></script>
 </body>
 </html>
