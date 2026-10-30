@@ -99,15 +99,7 @@ body{
 .secao2 h1{
     color: var(--color-texto);
 }
-.midia {
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
 
-.midia:hover {
-  transform: translateY(-2px);
-}
 .secao1 p{
     position: fixed;
     bottom: 5%;
@@ -115,6 +107,35 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.5em;
     color: var(--color-secundario);
+}
+.cena {
+    display: none;
+}
+
+.cena.visivel {
+    display: block;
+    animation: aparecer 0.35s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; }
+    to   { opacity: 1;}
+}
+
+
+.midia {
+    border: 2px solid transparent;
+    font-family: inherit;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.midia:hover {
+    transform: translateY(-2px);
+}
+
+.midia.ativa {
+    border-color: currentColor;
 }
 .login-container{
     

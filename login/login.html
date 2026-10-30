@@ -5,47 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | ARCHIVA</title>
     <link rel="stylesheet" href="css/estilo.css">
-<<<<<<< HEAD
     <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
 </head>
 <body>
-    <section class="secao1">
-        <img src="../img/logop.png" class="logo" alt="Logo do site" loading="lazy">
-       <!--<img src="../img/Designer (6).png" class="panfleto" alt="Imagen de logo" loading="lazy">-->
-       <svg class="estante" viewBox="0 0 260 130" role="img" aria-label="Estante com livros" xmlns="http://www.w3.org/2000/svg">
-  <rect class="livro l1" x="8"   y="30" width="26" height="80"  rx="3" fill="#B45309"/>
-  <rect class="livro l2" x="38"  y="14" width="22" height="96"  rx="3" fill="#0F1B3D"/>
-  <rect class="livro l3" x="64"  y="38" width="28" height="72"  rx="3" fill="#0D9488"/>
-  <rect class="livro l4" x="96"  y="22" width="22" height="88"  rx="3" fill="#F59E0B"/>
-  <rect class="livro l5" x="122" y="8"  width="26" height="102" rx="3" fill="#7C3AED"/>
-  <rect class="livro l6" x="152" y="34" width="22" height="76"  rx="3" fill="#1E3A8A"/>
-  <rect class="livro l7" x="178" y="20" width="28" height="90"  rx="3" fill="#B45309"/>
-  <rect class="livro l8" x="210" y="40" width="22" height="70"  rx="3" fill="#0D9488"/>
+   <section class="secao1">
+    <img src="../img/logop.png" class="logo" alt="Logo do site" loading="lazy">
 
-  <!-- detalhes nas lombadas -->
-  <rect x="14"  y="44" width="14" height="3" fill="#F7F3EA"/>
-  <rect x="132" y="24" width="6"  height="14" rx="2" fill="#F7F3EA"/>
+    <!-- 1. Livros: a sua estante, só com "cena visivel" e data-midia acrescentados -->
+    <svg class="estante cena visivel" data-midia="livros" viewBox="0 0 260 130" role="img" aria-label="Estante com livros" xmlns="http://www.w3.org/2000/svg">
+        <rect class="livro l1" x="8"   y="30" width="26" height="80"  rx="3" fill="#B45309"/>
+        <rect class="livro l2" x="38"  y="14" width="22" height="96"  rx="3" fill="#0F1B3D"/>
+        <rect class="livro l3" x="64"  y="38" width="28" height="72"  rx="3" fill="#0D9488"/>
+        <rect class="livro l4" x="96"  y="22" width="22" height="88"  rx="3" fill="#F59E0B"/>
+        <rect class="livro l5" x="122" y="8"  width="26" height="102" rx="3" fill="#7C3AED"/>
+        <rect class="livro l6" x="152" y="34" width="22" height="76"  rx="3" fill="#1E3A8A"/>
+        <rect class="livro l7" x="178" y="20" width="28" height="90"  rx="3" fill="#B45309"/>
+        <rect class="livro l8" x="210" y="40" width="22" height="70"  rx="3" fill="#0D9488"/>
+        <rect x="14"  y="44" width="14" height="3" fill="#F7F3EA"/>
+        <rect x="132" y="24" width="6"  height="14" rx="2" fill="#F7F3EA"/>
+        <rect x="4" y="110" width="236" height="6" rx="3" fill="#0F1B3D"/>
+    </svg>
 
-  <!-- tábua da prateleira -->
-  <rect x="4" y="110" width="236" height="6" rx="3" fill="#0F1B3D"/>
-</svg>
-<div class="midias">
-  <span class="midia livros">
-    <i class="ti ti-book"></i>Livros
-  </span>
-  <span class="midia audio">
-    <i class="ti ti-headphones"></i>Áudio
-  </span>
-  <span class="midia video">
-    <i class="ti ti-player-play"></i>Vídeo
-  </span>
-</div>
-    <p>Conhecimento ao seu alcance, em <br>
-         qualquer lugar.</p>
+    <!-- 2. Áudio -->
+    <svg class="estante cena" data-midia="audio" viewBox="0 0 260 130" role="img" aria-label="Ondas sonoras" xmlns="http://www.w3.org/2000/svg">
+        <rect x="14"  y="70" width="18" height="40"  rx="4" fill="#0D9488"/>
+        <rect x="44"  y="40" width="18" height="70"  rx="4" fill="#2DD4BF"/>
+        <rect x="74"  y="15" width="18" height="95"  rx="4" fill="#0D9488"/>
+        <rect x="104" y="50" width="18" height="60"  rx="4" fill="#2DD4BF"/>
+        <rect x="134" y="10" width="18" height="100" rx="4" fill="#0D9488"/>
+        <rect x="164" y="35" width="18" height="75"  rx="4" fill="#2DD4BF"/>
+        <rect x="194" y="60" width="18" height="50"  rx="4" fill="#0D9488"/>
+        <rect x="224" y="25" width="18" height="85"  rx="4" fill="#2DD4BF"/>
+        <rect x="4" y="110" width="246" height="6" rx="3" fill="#0F1B3D"/>
+    </svg>
 
+    <!-- 3. Vídeo -->
+    <svg class="estante cena" data-midia="video" viewBox="0 0 260 130" role="img" aria-label="Ecrã de vídeo" xmlns="http://www.w3.org/2000/svg">
+        <rect x="40" y="14" width="180" height="96" rx="8" fill="#7C3AED"/>
+        <polygon points="115,38 115,78 150,58" fill="#F7F3EA"/>
+        <rect x="56" y="94" width="148" height="4" rx="2" fill="#4A1FA8"/>
+        <rect x="56" y="94" width="60"  height="4" rx="2" fill="#F7F3EA"/>
+        <rect x="100" y="110" width="60" height="6" rx="3" fill="#0F1B3D"/>
+    </svg>
 
-    </section>
+    <!-- Etiquetas: de <span> para <button>, com data-midia -->
+    <div class="midias">
+        <button type="button" class="midia livros ativa" data-midia="livros" aria-pressed="true">
+            <i class="ti ti-book"></i>Livros
+        </button>
+        <button type="button" class="midia audio" data-midia="audio" aria-pressed="false">
+            <i class="ti ti-headphones"></i>Áudio
+        </button>
+        <button type="button" class="midia video" data-midia="video" aria-pressed="false">
+            <i class="ti ti-player-play"></i>Vídeo
+        </button>
+    </div>
+
+    <p>Conhecimento ao seu alcance, em <br> qualquer lugar.</p>
+</section>
     <section class="secao2">
         <div class="login-container">
             <h1>Bem-vindo de volta</h1>
@@ -71,27 +89,6 @@
 
     </section>
     
-=======
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-</head>
-<body>
-    <div class="login-container">
-        <img src="img/logo.png" alt="Imagen de logo">
-        <form action="../home/home.html" method="post">
-            <div class="input-container">
-                <input type="email" id="username" placeholder=" " required>
-                <label for="username">Email</label>
-            </div>
-            <div class="input-container">
-                <input type="password" id="password" name="password" placeholder=" " minlength="8" maxlength="16" required>
-                <label for="password" >Senha</label>
-            </div>
-            <button type="submit" class="btn-principal">Entrar</button>
-        </form>
-        <a href="esqueci.html" class="link">Esqueceu a senha?</a>
-        <br>
-        <a href="cadastro.html" class="btn-secundario">Criar Conta</a>
-    </fieldset>
->>>>>>> 4704f08e09cdddff16e393f0bafa7e8ce3dd677e
+<script src="js/login.js"></script>
 </body>
 </html>
