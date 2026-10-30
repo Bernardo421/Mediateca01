@@ -188,4 +188,21 @@ input:focus{
 .cadastrar a{
     text-decoration: none;
     color: var(--color-destaque);
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
 }
+.link:hover {
+    background-color: #284e88;
+   
+}
+.dizer {
+    color: var(--color-texto);
+}
+.para {
+    color: var(--color-texto);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+

@@ -8,29 +8,21 @@
     <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
 </head>
 <body>
-        <section class="secao1">
-        
-           <div class="voltar">
-                <a href="login.html"><img src="../img/seta-esquerda-icon.png" alt=""></a>
+        <div class="login-container">
+            <img src="img/logo.png" alt="Imagen de logo">
+            <div class="dizer">
+                <h1>Encotre a sua conta</h1>
+                <p>Digite seu email para recuperar a senha</p>
             </div>
-            <div class="container">
-                <div class="dizer">
-                    <h3>Digite seu email para recuperar a senha </h3>
+            <br>
+            <form action="../home/home.html" method="post">
+                <div class="input-container">
+                    <input type="email" id="username" placeholder=" " required>
+                    <label>Email</label>
                 </div>
-                
-                    
-                    <form action="../home/home.html" method="post">
-                        <div class="input-container">
-                            <input type="email" id="iemail" placeholder=" " required>
-                            <label for="iemail">Email</label>
-                        </div>
-                        <button type="submit" class="btn-principal">Enviar</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <section class="secao2">
-
-        </section>
+                <button type="submit" class="btn-principal">Enviar</button>
+            </form>
+            <a href="login.html" class="link">Voltar para o login</a>
+        </div>
 </body>
 </html>
