@@ -13,6 +13,7 @@
     --color-boton-hover: #1C86EE;
     --color-error: #FF0000;
     --color-altern:#eceff1;
+    --color-destaque: #f59e0b;
 } 
 body{
     background-color: #000000;

@@ -4,16 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | ARCHIVA</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
 </head>
 <body>
     <section class="secao1">
         <img src="../img/logop.png" class="logo" alt="Logo do site" loading="lazy">
-        <img src="../img/Designer (6).png" class="panfleto" alt="Imagen de logo" loading="lazy">
+       <!--<img src="../img/Designer (6).png" class="panfleto" alt="Imagen de logo" loading="lazy">-->
+       <svg class="estante" viewBox="0 0 260 130" role="img" aria-label="Estante com livros" xmlns="http://www.w3.org/2000/svg">
+  <rect class="livro l1" x="8"   y="30" width="26" height="80"  rx="3" fill="#B45309"/>
+  <rect class="livro l2" x="38"  y="14" width="22" height="96"  rx="3" fill="#0F1B3D"/>
+  <rect class="livro l3" x="64"  y="38" width="28" height="72"  rx="3" fill="#0D9488"/>
+  <rect class="livro l4" x="96"  y="22" width="22" height="88"  rx="3" fill="#F59E0B"/>
+  <rect class="livro l5" x="122" y="8"  width="26" height="102" rx="3" fill="#7C3AED"/>
+  <rect class="livro l6" x="152" y="34" width="22" height="76"  rx="3" fill="#1E3A8A"/>
+  <rect class="livro l7" x="178" y="20" width="28" height="90"  rx="3" fill="#B45309"/>
+  <rect class="livro l8" x="210" y="40" width="22" height="70"  rx="3" fill="#0D9488"/>
+
+  <!-- detalhes nas lombadas -->
+  <rect x="14"  y="44" width="14" height="3" fill="#F7F3EA"/>
+  <rect x="132" y="24" width="6"  height="14" rx="2" fill="#F7F3EA"/>
+
+  <!-- tábua da prateleira -->
+  <rect x="4" y="110" width="236" height="6" rx="3" fill="#0F1B3D"/>
+</svg>
+<div class="midias">
+  <span class="midia livros">
+    <i class="ti ti-book"></i>Livros
+  </span>
+  <span class="midia audio">
+    <i class="ti ti-headphones"></i>Áudio
+  </span>
+  <span class="midia video">
+    <i class="ti ti-player-play"></i>Vídeo
+  </span>
+</div>
+    <p>Conhecimento ao seu alcance, em <br>
+         qualquer lugar.</p>
+
 
     </section>
     <section class="secao2">
         <div class="login-container">
+            <h1>Bem-vindo de volta</h1>
+            <br>
             <h3>Iniciar sessão no ARCHIVA</h3>
             <form action="../home/home.html" method="post">
                 <div class="input-container">
@@ -24,11 +59,13 @@
                     <input type="password" id="password" name="password" placeholder=" " minlength="8" maxlength="16" required>
                     <label for="password" >Senha</label>
                 </div>
+                 <a href="esqueci.html" class="link-esqueci">Esqueceu a senha?</a>
+                 <br>
+                 <br>
                 <button type="submit" class="btn-principal">Entrar</button>
             </form>
-            <a href="esqueci.html" class="link-esqueci">Esqueceu a senha?</a>
             <br>
-            <a href="cadastro.html" class="cadastrar">Criar Conta</a>
+            <p class="cadastrar">Ainda não tem conta?<a href="cadastro.html" >Criar Conta</a></p>
         </div>
 
     </section>
