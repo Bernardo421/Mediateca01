@@ -1,59 +1,31 @@
-:root {
-    --color-primario: #0a1128;
-    --color-secundario: #182b70;
-    --color-terciaria: #ecefe1;
-    --color-texto: #ffffff;
-    --color-fundo: #bcc9db;
-    --color-boton: #083766;
-    --color-boton-hover: #0a89eb;
-    --color-error: #FF0000;
-    --color-confirmacao: #008000;
-    --color-destaque: #f59e0b;
+/* Acrescenta ao estilo.css, sem alterar o login */
+
+/* Painel direito pode rolar quando o formulário é alto */
+.secao2 {
+    overflow-y: auto;
+    padding: 30px 0;
+}
+.secao2 > .login-container {
+    margin: auto;            /* centra e nunca corta o topo */
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: Arial, Helvetica, sans-serif;
+/* Dois campos lado a lado */
+.linha {
     display: flex;
+    gap: 16px;
+    width: 400px;
 }
-.secao1{
-    background-color: var(--color-primario);
-    width: 50%;
-    height: 100vh;
-   position: relative;
+.linha .input-container {
+    flex: 1;
+    min-width: 0;
+}
+.linha .input-container input,
+.linha .input-container select {
+    width: 100%;
 }
 
-.voltar:hover{
-    background-color:#bcc9db35 ;
-}
-.voltar img{
-    margin: 5px;
-    width: 25px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
-.voltar img:hover{
-    transform: scale(1.3);
-
-}
-.container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.container h3{
-    text-align: left;
-    color: var(--color-terciaria);
-}
-.input-container{
-    position: relative;
-}
-.input-container input, select{
+/* select com o mesmo aspeto dos inputs */
+.input-container select {
     margin: 10px auto;
     width: 400px;
     height: 50px;
@@ -61,63 +33,56 @@ body{
     border: none;
     padding: 5px;
     font-size: large;
-    outline-color: var(--color-boton-hover);
+    background-color: #fff;
+    cursor: pointer;
 }
-.input-container input:hover{
-    border: 2px solid gray;
+.input-container select:hover {
+    border: 2px solid #0a89eb;
 }
-label{
-    font-size: larger;
-    position: absolute;
-    top: 30%;
-    left: 3%;
-    transition: all 0.3s ease;
+.input-container select:focus {
+    outline: none;
+    box-shadow: 0 0 10px 3px #0d6bf89f;
 }
-input:focus + label,
-input:not(:placeholder-shown) + label{
-    top: 13%;
+
+/* Campos de data e select: o label fica sempre em cima */
+.input-container.fixo label {
+    top: 15%;
     font-size: 0.8em;
     color: var(--color-boton-hover);
+}
+.input-container.fixo input,
+.input-container.fixo select {
+    padding-top: 18px;
+}
 
+/* Botão: dá um pouco de ar acima */
+#form-cadastro button,
+.login-container form button {
+    margin-top: 6px;
 }
-.container button{
-    display: block;
-    margin: auto;
-    width: 300px;
-    height: 40px;
-    border-radius: 10px;
-    border: none;
-    background-color: var(--color-boton);
-    color: var(--color-terciaria);
-    font-size: larger;
-}
-.container  button:hover{
-    background-color: var(--color-boton-hover);
-    color: var(--color-terciaria);
-}
-.secao2{
-     position: relative;
-     width: 50%;
-    height: 100vh;
-    background-color: var(--color-terciaria);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.secao2 .logo{
-    position: absolute;
-    top: 3%;
-    left: 3%;
 
+/* Mensagem de erro */
+.erro-msg {
+    min-height: 20px;
+    margin: 4px 0 10px;
+    font-size: 14px;
+    color: #ff6b6b;
 }
-.secao2 .panfleto{
-     display: block;
-   margin: 0 auto;
-   position: relative;
-   animation: mover 3s infinite alternate; 
-  
-   
-} @keyframes mover{
-    from{top: -5px ;}
-    to {top:60px;}
+
+/* Link "Voltar" e "Iniciar sessão" */
+.cadastrar a:hover,
+.link-esqueci:hover {
+    text-decoration: underline;
+}
+
+/* Telas pequenas: a secção da ilustração some e o formulário ocupa tudo */
+@media (max-width: 900px) {
+    body { flex-direction: column; }
+    .secao1 { display: none; }
+    .secao2 { width: 100%; min-height: 100vh; height: auto; }
+    .linha,
+    .input-container input,
+    .input-container select,
+    .login-container button { width: 100%; max-width: 400px; }
+    .login-container { width: 90%; max-width: 400px; }
 }

@@ -1,68 +1,141 @@
 <!DOCTYPE html>
-<html lang="Pt">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro | ARCHIVA</title>
+    <title>Criar conta | ARCHIVA</title>
+    <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/cadastro.css">
     <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
 </head>
 <body>
-    
-    <section class="secao1">
-        <div class="voltar">
-                <a href="login.html"><img src="../img/seta-esquerda-icon.png" alt=""></a>
-            </div>
-        <div class="container">
-            
-            <h3>Criar conta no ARCHIVA</h3>
-            <form action="" method="post">
+   <section class="secao1">
+    <img src="../img/logop.png" class="logo" alt="Logo do site" loading="lazy">
+
+    <!-- 1. Livros -->
+    <svg class="estante cena visivel" data-midia="livros" viewBox="0 0 260 130" role="img" aria-label="Estante com livros" xmlns="http://www.w3.org/2000/svg">
+        <rect class="livro l1" x="8"   y="30" width="26" height="80"  rx="3" fill="#B45309"/>
+        <rect class="livro l2" x="38"  y="14" width="22" height="96"  rx="3" fill="#0F1B3D"/>
+        <rect class="livro l3" x="64"  y="38" width="28" height="72"  rx="3" fill="#0D9488"/>
+        <rect class="livro l4" x="96"  y="22" width="22" height="88"  rx="3" fill="#F59E0B"/>
+        <rect class="livro l5" x="122" y="8"  width="26" height="102" rx="3" fill="#7C3AED"/>
+        <rect class="livro l6" x="152" y="34" width="22" height="76"  rx="3" fill="#1E3A8A"/>
+        <rect class="livro l7" x="178" y="20" width="28" height="90"  rx="3" fill="#B45309"/>
+        <rect class="livro l8" x="210" y="40" width="22" height="70"  rx="3" fill="#0D9488"/>
+        <rect x="14"  y="44" width="14" height="3" fill="#F7F3EA"/>
+        <rect x="132" y="24" width="6"  height="14" rx="2" fill="#F7F3EA"/>
+        <rect x="4" y="110" width="236" height="6" rx="3" fill="#0F1B3D"/>
+    </svg>
+
+    <!-- 2. Áudio -->
+    <svg class="estante cena" data-midia="audio" viewBox="0 0 260 130" role="img" aria-label="Ondas sonoras" xmlns="http://www.w3.org/2000/svg">
+        <rect x="14"  y="70" width="18" height="40"  rx="4" fill="#0D9488"/>
+        <rect x="44"  y="40" width="18" height="70"  rx="4" fill="#2DD4BF"/>
+        <rect x="74"  y="15" width="18" height="95"  rx="4" fill="#0D9488"/>
+        <rect x="104" y="50" width="18" height="60"  rx="4" fill="#2DD4BF"/>
+        <rect x="134" y="10" width="18" height="100" rx="4" fill="#0D9488"/>
+        <rect x="164" y="35" width="18" height="75"  rx="4" fill="#2DD4BF"/>
+        <rect x="194" y="60" width="18" height="50"  rx="4" fill="#0D9488"/>
+        <rect x="224" y="25" width="18" height="85"  rx="4" fill="#2DD4BF"/>
+        <rect x="4" y="110" width="246" height="6" rx="3" fill="#0F1B3D"/>
+    </svg>
+
+    <!-- 3. Vídeo -->
+    <svg class="estante cena" data-midia="video" viewBox="0 0 260 130" role="group" aria-label="Ecrã de vídeo" xmlns="http://www.w3.org/2000/svg">
+        <rect x="40" y="14" width="180" height="96" rx="8" fill="#7C3AED"/>
+        <g class="botao-play" role="button" tabindex="0" aria-label="Reproduzir" aria-pressed="false">
+            <rect x="100" y="30" width="65" height="56" fill="transparent"/>
+            <polygon class="icone-play" points="115,38 115,78 150,58" fill="#F7F3EA"/>
+            <g class="icone-pause" fill="#F7F3EA">
+                <rect x="117" y="38" width="10" height="40" rx="2"/>
+                <rect x="138" y="38" width="10" height="40" rx="2"/>
+            </g>
+        </g>
+        <rect x="56" y="94" width="148" height="4" rx="2" fill="#4A1FA8"/>
+        <rect class="progresso" x="56" y="94" width="148" height="4" rx="2" fill="#F7F3EA"/>
+        <rect x="100" y="110" width="60" height="6" rx="3" fill="#0F1B3D"/>
+    </svg>
+
+    <div class="midias">
+        <button type="button" class="midia livros ativa" data-midia="livros" aria-pressed="true">
+            <i class="ti ti-book"></i>Livros
+        </button>
+        <button type="button" class="midia audio" data-midia="audio" aria-pressed="false">
+            <i class="ti ti-headphones"></i>Áudio
+        </button>
+        <button type="button" class="midia video" data-midia="video" aria-pressed="false">
+            <i class="ti ti-player-play"></i>Vídeo
+        </button>
+    </div>
+
+    <p>Conhecimento ao seu alcance, em <br> qualquer lugar.</p>
+</section>
+    <section class="secao2">
+        <div class="login-container">
+            <h1>Crie a sua conta</h1>
+            <br>
+            <h3>Junte-se à comunidade ARCHIVA</h3>
+
+            <form id="form-cadastro" action="cadastro.php" method="post" novalidate>
+
                 <div class="input-container">
-                    <input type="text" id="userName" name="username"  autocomplete="username" placeholder=" " required>
-                    <label for="userName">Nome de utilizador</label>
+                    <input type="text" id="nome" name="nome" placeholder=" " minlength="3" maxlength="40" autocomplete="username" required>
+                    <label for="nome">Nome de utilizador</label>
                 </div>
+
+                <div class="linha">
+                    <div class="input-container fixo">
+                        <input type="date" id="nascimento" name="nascimento" required>
+                        <label for="nascimento">Data de nascimento</label>
+                    </div>
+                    <div class="input-container fixo">
+                        <select id="genero" name="genero" required>
+                            <option value="" selected disabled>Selecionar</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                            <option value="O">Outro</option>
+                        </select>
+                        <label for="genero">Género</label>
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="input-container">
+                        <input type="tel" id="telefone" class="telbi" name="telefone" placeholder=" " inputmode="tel" pattern="[0-9+ ]{9,15}" autocomplete="tel" required>
+                        <label for="telefone">Telefone</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="bi" class="telbi" name="bi" placeholder=" " maxlength="14" style="text-transform:uppercase" required>
+                        <label for="bi">Nº do BI</label>
+                    </div>
+                </div>
+
                 <div class="input-container">
-                    <input type="date" autocomplete="bday" id="data" name="data_de_nascimento" placeholder=" " required>
-                    <label for="data">Data de nascimento</label>
-                </div>
-                 <div class="input-container">
-                    <input type="text" placeholder=" " id="nBI" name="identidade" pattern="[0-9]{9}[A-Z]{2}[0-9]{3}" required>
-                     <label for="nBI">Numero de BI</label>
-                </div>
-                <div class="input-container">
-                    <select id="genero" required>
-                        <option value="" disabled selected>Genero</option>
-                        <option value="masc">Masculino</option>
-                        <option value="fem">Femenino</option>
-                        <option value="pers">Personalizado</option>
-                    </select>
-                    <label for="genero"></label>
-                </div>
-                <div class="input-container">
-                    <input type="tel" autocomplete="tel" id="numero" name="inumero" placeholder=" " required>
-                     <label for="numero">Numero de telefone</label>
-                </div>
-                <div class="input-container">
-                    <input type="email" autocomplete="email" id="email" name="iemail" placeholder=" " required>
+                    <input type="email" id="email" name="email" placeholder=" " autocomplete="email" required>
                     <label for="email">Email</label>
                 </div>
-                <div class="input-container">
-                    <input type="password" placeholder=" " id="senha" min="8" max="16" name="isenha" required>
-                     <label for="senha">Senha</label>
-                </div>
-                 <div class="input-container">
-                    <input type="password" placeholder=" " id="csenha" min="8" max="16" name="Confsenha" required>
-                    <label for="csenha">Confirmar senha</label>
-                </div>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-</section>
-<section class="secao2">
-    <img src="../img/logop.png" class="logo" alt="Logo do site" loading="lazy">
-    <img src="../img/Designer (7).png" class="panfleto" alt="Panfleto do site" loading="lazy">
 
-</section>
-<script src="js/condi.js"></script>
+                <div class="input-container">
+                    <input type="password" id="password" name="password" placeholder=" " minlength="8" maxlength="16" autocomplete="new-password" required>
+                    <label for="password">Senha</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="confirmar" name="confirmar" placeholder=" " minlength="8" maxlength="16" autocomplete="new-password" required>
+                    <label for="confirmar">Confirmar senha</label>
+                </div>
+
+                <p class="erro-msg" id="erro" role="alert" aria-live="polite"></p>
+
+                <button type="submit" class="btn-principal">Criar conta</button>
+            </form>
+            <br>
+            <p class="cadastrar">Já tem conta? <a href="login.html">Iniciar sessão</a></p>
+        </div>
+    </section>
+
+<script src="js/login.js"></script>
+<script src="js/cadastro.js"></script>
 </body>
 </html>

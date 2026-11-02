@@ -41,13 +41,22 @@
     </svg>
 
     <!-- 3. Vídeo -->
-    <svg class="estante cena" data-midia="video" viewBox="0 0 260 130" role="img" aria-label="Ecrã de vídeo" xmlns="http://www.w3.org/2000/svg">
-        <rect x="40" y="14" width="180" height="96" rx="8" fill="#7C3AED"/>
-        <polygon points="115,38 115,78 150,58" fill="#F7F3EA"/>
-        <rect x="56" y="94" width="148" height="4" rx="2" fill="#4A1FA8"/>
-        <rect x="56" y="94" width="60"  height="4" rx="2" fill="#F7F3EA"/>
-        <rect x="100" y="110" width="60" height="6" rx="3" fill="#0F1B3D"/>
-    </svg>
+    <svg class="estante cena" data-midia="video" viewBox="0 0 260 130" role="group" aria-label="Ecrã de vídeo" xmlns="http://www.w3.org/2000/svg">
+    <rect x="40" y="14" width="180" height="96" rx="8" fill="#7C3AED"/>
+
+    <g class="botao-play" role="button" tabindex="0" aria-label="Reproduzir" aria-pressed="false">
+        <rect x="100" y="30" width="65" height="56" fill="transparent"/> <!-- área de clique maior -->
+        <polygon class="icone-play" points="115,38 115,78 150,58" fill="#F7F3EA"/>
+        <g class="icone-pause" fill="#F7F3EA">
+            <rect x="117" y="38" width="10" height="40" rx="2"/>
+            <rect x="138" y="38" width="10" height="40" rx="2"/>
+        </g>
+    </g>
+
+    <rect x="56" y="94" width="148" height="4" rx="2" fill="#4A1FA8"/>
+    <rect class="progresso" x="56" y="94" width="148" height="4" rx="2" fill="#F7F3EA"/>
+    <rect x="100" y="110" width="60" height="6" rx="3" fill="#0F1B3D"/>
+</svg>
 
     <!-- Etiquetas: de <span> para <button>, com data-midia -->
     <div class="midias">

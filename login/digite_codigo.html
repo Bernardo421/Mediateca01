@@ -17,7 +17,8 @@
                 <br>
                 <form action="../home/home.html" method="post">
                     <div class="input-container">
-                        <input type="number" id="username" placeholder=" " required autocomplete="on">
+                      <input type="text" name="codigo" inputmode="numeric" pattern="[0-9]{6}"
+                       maxlength="6" autocomplete="one-time-code" placeholder=" " required>
                         <label>Codigo</label>
                     </div>
                     <button type="submit" class="btn-principal">Enviar</button>
