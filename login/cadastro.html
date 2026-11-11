@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="Pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,6 +57,107 @@
         <rect x="100" y="110" width="60" height="6" rx="3" fill="#0F1B3D"/>
     </svg>
 
+    <!-- 4. Imagens: cada moldura sobe no hover e revela a imagem -->
+    <svg class="estante cena" data-midia="imagens" viewBox="0 0 260 130" role="group" aria-label="Galeria de imagens" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <clipPath id="recorte-foto"><rect x="4" y="4" width="42" height="56" rx="2"/></clipPath>
+        </defs>
+
+        <!-- 1. Paisagem -->
+        <g transform="translate(12,30)">
+            <g class="foto" tabindex="0" role="img" aria-label="Foto de uma paisagem com montanhas">
+                <rect class="area" x="0" y="0" width="50" height="88" fill="transparent"/>
+                <rect x="0" y="0" width="50" height="76" rx="4" fill="#F7F3EA"/>
+                <g class="vazio">
+                    <rect x="4" y="4" width="42" height="56" rx="2" fill="#CBD5E1"/>
+                    <circle cx="16" cy="20" r="4" fill="#F7F3EA"/>
+                    <polygon points="4,60 20,38 30,50 36,42 46,60" fill="#94A3B8"/>
+                </g>
+                <g class="revela" clip-path="url(#recorte-foto)">
+                    <rect x="4" y="4" width="42" height="56" fill="#7DD3FC"/>
+                    <circle cx="35" cy="16" r="6" fill="#F59E0B"/>
+                    <polygon points="4,60 18,28 32,60" fill="#1E3A8A"/>
+                    <polygon points="16,60 34,34 50,60" fill="#0D9488"/>
+                    <rect x="4" y="52" width="42" height="8" fill="#115E59"/>
+                </g>
+                <rect x="6" y="66" width="26" height="3" rx="1.5" fill="#CBD5E1"/>
+            </g>
+        </g>
+
+        <!-- 2. Retrato -->
+        <g transform="translate(74,30)">
+            <g class="foto" tabindex="0" role="img" aria-label="Foto de um retrato">
+                <rect class="area" x="0" y="0" width="50" height="88" fill="transparent"/>
+                <rect x="0" y="0" width="50" height="76" rx="4" fill="#F7F3EA"/>
+                <g class="vazio">
+                    <rect x="4" y="4" width="42" height="56" rx="2" fill="#CBD5E1"/>
+                    <circle cx="16" cy="20" r="4" fill="#F7F3EA"/>
+                    <polygon points="4,60 20,38 30,50 36,42 46,60" fill="#94A3B8"/>
+                </g>
+                <g class="revela" clip-path="url(#recorte-foto)">
+                    <rect x="4" y="4" width="42" height="56" fill="#C4B5FD"/>
+                    <path d="M6,60 Q8,42 25,42 Q42,42 44,60 Z" fill="#7C3AED"/>
+                    <circle cx="25" cy="28" r="10" fill="#F3E3D0"/>
+                    <path d="M15,28 A10,10 0 0 1 35,28 Q25,21 15,28 Z" fill="#0F1B3D"/>
+                </g>
+                <rect x="6" y="66" width="26" height="3" rx="1.5" fill="#CBD5E1"/>
+            </g>
+        </g>
+
+        <!-- 3. Pôr do sol -->
+        <g transform="translate(136,30)">
+            <g class="foto" tabindex="0" role="img" aria-label="Foto de um pôr do sol no mar">
+                <rect class="area" x="0" y="0" width="50" height="88" fill="transparent"/>
+                <rect x="0" y="0" width="50" height="76" rx="4" fill="#F7F3EA"/>
+                <g class="vazio">
+                    <rect x="4" y="4" width="42" height="56" rx="2" fill="#CBD5E1"/>
+                    <circle cx="16" cy="20" r="4" fill="#F7F3EA"/>
+                    <polygon points="4,60 20,38 30,50 36,42 46,60" fill="#94A3B8"/>
+                </g>
+                <g class="revela" clip-path="url(#recorte-foto)">
+                    <rect x="4" y="4" width="42" height="56" fill="#FB923C"/>
+                    <rect x="4" y="4" width="42" height="18" fill="#F472B6"/>
+                    <circle cx="25" cy="36" r="10" fill="#FDE68A"/>
+                    <rect x="4" y="38" width="42" height="22" fill="#1E3A8A"/>
+                    <rect x="19" y="42" width="12" height="2" rx="1" fill="#FDE68A"/>
+                    <rect x="21" y="47" width="8" height="2" rx="1" fill="#FDE68A"/>
+                    <rect x="23" y="52" width="4" height="2" rx="1" fill="#FDE68A"/>
+                </g>
+                <rect x="6" y="66" width="26" height="3" rx="1.5" fill="#CBD5E1"/>
+            </g>
+        </g>
+
+        <!-- 4. Cidade à noite -->
+        <g transform="translate(198,30)">
+            <g class="foto" tabindex="0" role="img" aria-label="Foto de uma cidade à noite">
+                <rect class="area" x="0" y="0" width="50" height="88" fill="transparent"/>
+                <rect x="0" y="0" width="50" height="76" rx="4" fill="#F7F3EA"/>
+                <g class="vazio">
+                    <rect x="4" y="4" width="42" height="56" rx="2" fill="#CBD5E1"/>
+                    <circle cx="16" cy="20" r="4" fill="#F7F3EA"/>
+                    <polygon points="4,60 20,38 30,50 36,42 46,60" fill="#94A3B8"/>
+                </g>
+                <g class="revela" clip-path="url(#recorte-foto)">
+                    <rect x="4" y="4" width="42" height="56" fill="#0F1B3D"/>
+                    <circle cx="36" cy="14" r="5" fill="#F7F3EA"/>
+                    <rect x="6"  y="34" width="10" height="26" fill="#7C3AED"/>
+                    <rect x="18" y="24" width="12" height="36" fill="#1E3A8A"/>
+                    <rect x="32" y="30" width="12" height="30" fill="#7C3AED"/>
+                    <rect x="9"  y="38" width="2" height="2" fill="#F59E0B"/>
+                    <rect x="9"  y="46" width="2" height="2" fill="#F59E0B"/>
+                    <rect x="22" y="30" width="2" height="2" fill="#F59E0B"/>
+                    <rect x="22" y="40" width="2" height="2" fill="#F59E0B"/>
+                    <rect x="25" y="48" width="2" height="2" fill="#F59E0B"/>
+                    <rect x="36" y="36" width="2" height="2" fill="#F59E0B"/>
+                    <rect x="39" y="46" width="2" height="2" fill="#F59E0B"/>
+                </g>
+                <rect x="6" y="66" width="26" height="3" rx="1.5" fill="#CBD5E1"/>
+            </g>
+        </g>
+
+        <rect x="4" y="112" width="246" height="6" rx="3" fill="#0F1B3D"/>
+    </svg>
+
     <div class="midias">
         <button type="button" class="midia livros ativa" data-midia="livros" aria-pressed="true">
             <i class="ti ti-book"></i>Livros
@@ -66,6 +167,9 @@
         </button>
         <button type="button" class="midia video" data-midia="video" aria-pressed="false">
             <i class="ti ti-player-play"></i>Vídeo
+        </button>
+        <button type="button" class="midia imagens" data-midia="imagens" aria-pressed="false">
+            <i class="ti ti-photo"></i>Imagens
         </button>
     </div>
 
@@ -102,11 +206,11 @@
 
                 <div class="linha">
                     <div class="input-container">
-                        <input type="tel" id="telefone" class="telbi" name="telefone" placeholder=" " inputmode="tel" pattern="[0-9+ ]{9,15}" autocomplete="tel" required>
+                        <input type="tel" id="telefone" name="telefone" placeholder=" " inputmode="tel" pattern="[0-9+ ]{9,15}" autocomplete="tel" required>
                         <label for="telefone">Telefone</label>
                     </div>
                     <div class="input-container">
-                        <input type="text" id="bi" class="telbi" name="bi" placeholder=" " maxlength="14" style="text-transform:uppercase" required>
+                        <input type="text" id="bi" name="bi" placeholder=" " maxlength="14" style="text-transform:uppercase" required>
                         <label for="bi">Nº do BI</label>
                     </div>
                 </div>
@@ -125,7 +229,8 @@
                     <input type="password" id="confirmar" name="confirmar" placeholder=" " minlength="8" maxlength="16" autocomplete="new-password" required>
                     <label for="confirmar">Confirmar senha</label>
                 </div>
-
+                 <br>
+                 <br>
                 <p class="erro-msg" id="erro" role="alert" aria-live="polite"></p>
 
                 <button type="submit" class="btn-principal">Criar conta</button>

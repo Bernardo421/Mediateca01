@@ -1,30 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmação | ARCHIVA</title>
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/digite_codigo.css">
+    <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
 </head>
 <body>
-            <div class="login-container">
-                <img src="img/logo.png" alt="Imagen de logo">
-                <p class="para"></p>
-                <div class="para">
-                    <h1>Digite o seu Codigo de Confirmação</h1>
+   <section class="secao1">
+    <img src="../img/logop.png" class="logo" alt="Logo do site" loading="lazy">
+
+    <!-- 1. Livros -->
+    <svg class="estante cena visivel" data-midia="livros" viewBox="0 0 260 130" role="img" aria-label="Estante com livros" xmlns="http://www.w3.org/2000/svg">
+        <rect class="livro l1" x="8"   y="30" width="26" height="80"  rx="3" fill="#B45309"/>
+        <rect class="livro l2" x="38"  y="14" width="22" height="96"  rx="3" fill="#0F1B3D"/>
+        <rect class="livro l3" x="64"  y="38" width="28" height="72"  rx="3" fill="#0D9488"/>
+        <rect class="livro l4" x="96"  y="22" width="22" height="88"  rx="3" fill="#F59E0B"/>
+        <rect class="livro l5" x="122" y="8"  width="26" height="102" rx="3" fill="#7C3AED"/>
+        <rect class="livro l6" x="152" y="34" width="22" height="76"  rx="3" fill="#1E3A8A"/>
+        <rect class="livro l7" x="178" y="20" width="28" height="90"  rx="3" fill="#B45309"/>
+        <rect class="livro l8" x="210" y="40" width="22" height="70"  rx="3" fill="#0D9488"/>
+        <rect x="14"  y="44" width="14" height="3" fill="#F7F3EA"/>
+        <rect x="132" y="24" width="6"  height="14" rx="2" fill="#F7F3EA"/>
+        <rect x="4" y="110" width="236" height="6" rx="3" fill="#0F1B3D"/>
+    </svg>
+
+    <!-- 2. Áudio -->
+    <svg class="estante cena" data-midia="audio" viewBox="0 0 260 130" role="img" aria-label="Ondas sonoras" xmlns="http://www.w3.org/2000/svg">
+        <rect x="14"  y="70" width="18" height="40"  rx="4" fill="#0D9488"/>
+        <rect x="44"  y="40" width="18" height="70"  rx="4" fill="#2DD4BF"/>
+        <rect x="74"  y="15" width="18" height="95"  rx="4" fill="#0D9488"/>
+        <rect x="104" y="50" width="18" height="60"  rx="4" fill="#2DD4BF"/>
+        <rect x="134" y="10" width="18" height="100" rx="4" fill="#0D9488"/>
+        <rect x="164" y="35" width="18" height="75"  rx="4" fill="#2DD4BF"/>
+        <rect x="194" y="60" width="18" height="50"  rx="4" fill="#0D9488"/>
+        <rect x="224" y="25" width="18" height="85"  rx="4" fill="#2DD4BF"/>
+        <rect x="4" y="110" width="246" height="6" rx="3" fill="#0F1B3D"/>
+    </svg>
+
+    <!-- 3. Vídeo -->
+    <svg class="estante cena" data-midia="video" viewBox="0 0 260 130" role="group" aria-label="Ecrã de vídeo" xmlns="http://www.w3.org/2000/svg">
+        <rect x="40" y="14" width="180" height="96" rx="8" fill="#7C3AED"/>
+        <g class="botao-play" role="button" tabindex="0" aria-label="Reproduzir" aria-pressed="false">
+            <rect x="100" y="30" width="65" height="56" fill="transparent"/>
+            <polygon class="icone-play" points="115,38 115,78 150,58" fill="#F7F3EA"/>
+            <g class="icone-pause" fill="#F7F3EA">
+                <rect x="117" y="38" width="10" height="40" rx="2"/>
+                <rect x="138" y="38" width="10" height="40" rx="2"/>
+            </g>
+        </g>
+        <rect x="56" y="94" width="148" height="4" rx="2" fill="#4A1FA8"/>
+        <rect class="progresso" x="56" y="94" width="148" height="4" rx="2" fill="#F7F3EA"/>
+        <rect x="100" y="110" width="60" height="6" rx="3" fill="#0F1B3D"/>
+    </svg>
+
+    <!-- 4. Imagens: cada moldura sobe no hover e revela a imagem -->
+    <svg class="estante cena" data-midia="imagens" viewBox="0 0 260 130" role="group" aria-label="Galeria de imagens" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <clipPath id="recorte-foto"><rect x="4" y="4" width="42" height="56" rx="2"/></clipPath>
+        </defs>
+
+        <!-- 1. Paisagem -->
+        <g transform="translate(12,30)">
+            <g class="foto" tabindex="0" role="img" aria-label="Foto de uma paisagem com montanhas">
+                <rect class="area" x="0" y="0" width="50" height="88" fill="transparent"/>
+                <rect x="0" y="0" width="50" height="76" rx="4" fill="#F7F3EA"/>
+                <g class="vazio">
+                    <rect x="4" y="4" width="42" height="56" rx="2" fill="#CBD5E1"/>
+                    <circle cx="16" cy="20" r="4" fill="#F7F3EA"/>
+                    <polygon points="4,60 20,38 30,50 36,42 46,60" fill="#94A3B8"/>
+                </g>
+                <g class="revela" clip-path="url(#recorte-foto)">
+                    <rect x="4" y="4" width="42" height="56" fill="#7DD3FC"/>
+                    <circle cx="35" cy="16" r="6" fill="#F59E0B"/>
+                    <polygon points="4,60 18,28 32,60" fill="#1E3A8A"/>
+                    <polygon points="16,60 34,34 50,60" fill="#0D9488"/>
+                    <rect x="4" y="52" width="42" height="8" fill="#115E59"/>
+                </g>
+                <rect x="6" y="66" width="26" height="3" rx="1.5" fill="#CBD5E1"/>
+            </g>
+        </g>
+
+        <!-- 2. Retrato -->
+        <g transform="translate(74,30)">
+            <g class="foto" tabindex="0" role="img" aria-label="Foto de um retrato">
+                <rect class="area" x="0" y="0" width="50" height="88" fill="transparent"/>
+                <rect x="0" y="0" width="50" height="76" rx="4" fill="#F7F3EA"/>
+                <g class="vazio">
+                    <rect x="4" y="4" width="42" height="56" rx="2" fill="#CBD5E1"/>
+                    <circle cx="16" cy="20" r="4" fill="#F7F3EA"/>
+                    <polygon points="4,60 20,38 30,50 36,42 46,60" fill="#94A3B8"/>
+                </g>
+                <g class="revela" clip-path="url(#recorte-foto)">
+                    <rect x="4" y="4" width="42" height="56" fill="#C4B5FD"/>
+                    <path d="M6,60 Q8,42 25,42 Q42,42 44,60 Z" fill="#7C3AED"/>
+                    <circle cx="25" cy="28" r="10" fill="#F3E3D0"/>
+                    <path d="M15,28 A10,10 0 0 1 35,28 Q25,21 15,28 Z" fill="#0F1B3D"/>
+                </g>
+                <rect x="6" y="66" width="26" height="3" rx="1.5" fill="#CBD5E1"/>
+            </g>
+        </g>
+
+        <!-- 3. Pôr do sol -->
+        <g transform="translate(136,30)">
+            <g class="foto" tabindex="0" role="img" aria-label="Foto de um pôr do sol no mar">
+                <rect class="area" x="0" y="0" width="50" height="88" fill="transparent"/>
+                <rect x="0" y="0" width="50" height="76" rx="4" fill="#F7F3EA"/>
+                <g class="vazio">
+                    <rect x="4" y="4" width="42" height="56" rx="2" fill="#CBD5E1"/>
+                    <circle cx="16" cy="20" r="4" fill="#F7F3EA"/>
+                    <polygon points="4,60 20,38 30,50 36,42 46,60" fill="#94A3B8"/>
+                </g>
+                <g class="revela" clip-path="url(#recorte-foto)">
+                    <rect x="4" y="4" width="42" height="56" fill="#FB923C"/>
+                    <rect x="4" y="4" width="42" height="18" fill="#F472B6"/>
+                    <circle cx="25" cy="36" r="10" fill="#FDE68A"/>
+                    <rect x="4" y="38" width="42" height="22" fill="#1E3A8A"/>
+                    <rect x="19" y="42" width="12" height="2" rx="1" fill="#FDE68A"/>
+                    <rect x="21" y="47" width="8" height="2" rx="1" fill="#FDE68A"/>
+                    <rect x="23" y="52" width="4" height="2" rx="1" fill="#FDE68A"/>
+                </g>
+                <rect x="6" y="66" width="26" height="3" rx="1.5" fill="#CBD5E1"/>
+            </g>
+        </g>
+
+        <!-- 4. Cidade à noite -->
+        <g transform="translate(198,30)">
+            <g class="foto" tabindex="0" role="img" aria-label="Foto de uma cidade à noite">
+                <rect class="area" x="0" y="0" width="50" height="88" fill="transparent"/>
+                <rect x="0" y="0" width="50" height="76" rx="4" fill="#F7F3EA"/>
+                <g class="vazio">
+                    <rect x="4" y="4" width="42" height="56" rx="2" fill="#CBD5E1"/>
+                    <circle cx="16" cy="20" r="4" fill="#F7F3EA"/>
+                    <polygon points="4,60 20,38 30,50 36,42 46,60" fill="#94A3B8"/>
+                </g>
+                <g class="revela" clip-path="url(#recorte-foto)">
+                    <rect x="4" y="4" width="42" height="56" fill="#0F1B3D"/>
+                    <circle cx="36" cy="14" r="5" fill="#F7F3EA"/>
+                    <rect x="6"  y="34" width="10" height="26" fill="#7C3AED"/>
+                    <rect x="18" y="24" width="12" height="36" fill="#1E3A8A"/>
+                    <rect x="32" y="30" width="12" height="30" fill="#7C3AED"/>
+                    <rect x="9"  y="38" width="2" height="2" fill="#F59E0B"/>
+                    <rect x="9"  y="46" width="2" height="2" fill="#F59E0B"/>
+                    <rect x="22" y="30" width="2" height="2" fill="#F59E0B"/>
+                    <rect x="22" y="40" width="2" height="2" fill="#F59E0B"/>
+                    <rect x="25" y="48" width="2" height="2" fill="#F59E0B"/>
+                    <rect x="36" y="36" width="2" height="2" fill="#F59E0B"/>
+                    <rect x="39" y="46" width="2" height="2" fill="#F59E0B"/>
+                </g>
+                <rect x="6" y="66" width="26" height="3" rx="1.5" fill="#CBD5E1"/>
+            </g>
+        </g>
+
+        <rect x="4" y="112" width="246" height="6" rx="3" fill="#0F1B3D"/>
+    </svg>
+
+    <div class="midias">
+        <button type="button" class="midia livros ativa" data-midia="livros" aria-pressed="true">
+            <i class="ti ti-book"></i>Livros
+        </button>
+        <button type="button" class="midia audio" data-midia="audio" aria-pressed="false">
+            <i class="ti ti-headphones"></i>Áudio
+        </button>
+        <button type="button" class="midia video" data-midia="video" aria-pressed="false">
+            <i class="ti ti-player-play"></i>Vídeo
+        </button>
+        <button type="button" class="midia imagens" data-midia="imagens" aria-pressed="false">
+            <i class="ti ti-photo"></i>Imagens
+        </button>
+    </div>
+
+    <p>Conhecimento ao seu alcance, em <br> qualquer lugar.</p>
+</section>
+    <section class="secao2">
+        <div class="login-container">
+            <h1>Digite o seu código de confirmação</h1>
+            <br>
+            <h3>Enviámos um código de 6 dígitos para o seu email</h3>
+            <form action="../home/home.html" method="post">
+                <div class="input-container">
+                    <input type="text" id="codigo" name="codigo" class="codigo" inputmode="numeric"
+                           pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code"
+                           placeholder=" " required>
+                    <label for="codigo" class="input-label">Código</label>
                 </div>
                 <br>
-                <form action="../home/home.html" method="post">
-                    <div class="input-container">
-                      <input type="text" name="codigo" inputmode="numeric" pattern="[0-9]{6}"
-                       maxlength="6" autocomplete="one-time-code" placeholder=" " required>
-                        <label>Codigo</label>
-                    </div>
-                    <button type="submit" class="btn-principal">Enviar</button>
-                </form>
-                <a href="esqueci.html" class="link">Voltar para o login</a>
-            </div>
-    
+                <button type="submit" class="btn-principal">Enviar</button>
+            </form>
+            <br>
+            <p class="cadastrar">Não recebeu o código? <a href="esqueci.html">Tentar novamente</a></p>
+        </div>
+    </section>
+
+<script src="js/login.js"></script>
+<script src="js/digite_codigo.js"></script>
 </body>
 </html>

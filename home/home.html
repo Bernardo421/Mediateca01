@@ -1,50 +1,179 @@
 <!DOCTYPE html>
-<html lang="pt-BR" method="post">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | ARCHIVA</title>
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="shortcut icon" href="../login/img/icon.png" type="image/x-icon">
+    <title>Início | ARCHIVA</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
 </head>
 <body>
-    <header>
-     <img src="../img/logo.png" alt="">
-    <div class="pesqui">
-        </div>
-        <nav>
-           <a href="" class="icon-itens">
-            <img src="../img/casa.png" alt="">
-            <span>Inicio</span>
-           </a>
-           <a href="" class="icon-itens">
-            <img src="../img/intercambio-cultural.png" alt="">
-            <span>Espaço Cultural</span></a>
-           <a href="" class="icon-itens">
-            <img src="../img/arquivos.png" alt="">
-            <span>Acervos</span></a>
-           <a href="" class="icon-itens">
-            <img src="../img/auditoria.png" alt="">
-            <span>Referências</span></a>
-        </nav>
-        <div>
-            <input type="search">
-        </div>
-        <div>
-            <img src="../img/perfil-de-usuario.png" alt="">
+
+<header class="topo">
+    <nav class="menu" aria-label="Principal">
+        <img src="../img/logob.png" class="logo" alt="Logo do site" loading="lazy">
+
+        <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuLinks" aria-label="Abrir menu">
+            <i class="ti ti-menu-2"></i>
+        </button>
+
+        <div class="menu-links" id="menuLinks">
+            <div class="menu-tipos">
+                <a href="#novidades" data-filtro="livros">Inicio</a>
+                <a href="#novidades" data-filtro="audio">Espaço cultural</a>
+                <a href="#novidades" data-filtro="video">Referências</a>
+                <a href="#novidades" data-filtro="imagens">Acervos</a>
+            </div>
+            <a href="biblioteca.html" class="menu-biblioteca">A minha biblioteca</a>
         </div>
 
-    </header>
-    <section>
+        <a href="perfil.html" class="avatar" aria-label="Perfil"><img src="../img/perfil-de-usuario.png" alt=""></a>
+    </nav>
 
+    <div class="hero">
+        <div class="hero-texto">
+            <h1>Conhecimento ao seu alcance, em qualquer lugar.</h1>
+            <p>Livros, áudio, vídeo e imagens da mediateca num só lugar.</p>
+
+            <form class="busca" id="formBusca" role="search">
+                <input type="search" id="busca" placeholder="Pesquisar por título, autor ou tema" aria-label="Pesquisar na mediateca" autocomplete="off">
+                <button type="submit">Pesquisar</button>
+            </form>
+
+            <div class="filtros" role="group" aria-label="Filtrar por tipo">
+                <button type="button" class="etiqueta todos ativa" data-filtro="todos" aria-pressed="true">Todos</button>
+                <button type="button" class="etiqueta livros" data-filtro="livros" aria-pressed="false"><i class="ti ti-book"></i>Livros</button>
+                <button type="button" class="etiqueta audio" data-filtro="audio" aria-pressed="false"><i class="ti ti-headphones"></i>Áudio</button>
+                <button type="button" class="etiqueta video" data-filtro="video" aria-pressed="false"><i class="ti ti-player-play"></i>Vídeo</button>
+                <button type="button" class="etiqueta imagens" data-filtro="imagens" aria-pressed="false"><i class="ti ti-photo"></i>Imagens</button>
+            </div>
+        </div>
+
+        <div class="estante" aria-hidden="true">
+            <div class="lombadas">
+                <span style="height:200px;background:#B45309"></span>
+                <span style="height:250px;background:#bcc9db"></span>
+                <span style="height:170px;background:#0D9488"></span>
+                <span style="height:220px;background:#F59E0B"></span>
+                <span style="height:280px;background:#7C3AED"></span>
+                <span style="height:190px;background:#E6DDFB"></span>
+                <span style="height:240px;background:#B45309"></span>
+                <span style="height:180px;background:#0D9488"></span>
+            </div>
+            <div class="prateleira"></div>
+        </div>
+    </div>
+</header>
+
+<main class="conteudo">
+
+    <section aria-labelledby="t-tipos">
+        <h2 id="t-tipos">Explore por tipo</h2>
+        <div class="tipos">
+            <a href="#novidades" class="tipo livros" data-filtro="livros">
+                <i class="ti ti-book"></i>
+                <strong>Livros</strong>
+                <span>Leia online ou guarde para depois</span>
+            </a>
+            <a href="#novidades" class="tipo audio" data-filtro="audio">
+                <i class="ti ti-headphones"></i>
+                <strong>Áudio</strong>
+                <span>Audiolivros, podcasts e música</span>
+            </a>
+            <a href="#novidades" class="tipo video" data-filtro="video">
+                <i class="ti ti-player-play"></i>
+                <strong>Vídeo</strong>
+                <span>Aulas, documentários e palestras</span>
+            </a>
+            <a href="#novidades" class="tipo imagens" data-filtro="imagens">
+                <i class="ti ti-photo"></i>
+                <strong>Imagens</strong>
+                <span>Fotografias, mapas e arquivo visual</span>
+            </a>
+        </div>
     </section>
-    <main>
-   
-       
-    </main>
-    <footer>
-       
-    </footer>
-    
+
+    <section aria-labelledby="t-continuar">
+        <h2 id="t-continuar">Continue de onde parou</h2>
+        <div class="continuar">
+            <a href="#" class="retomar">
+                <div class="mini-capa" style="--capa:#B45309"></div>
+                <div class="retomar-info">
+                    <strong>[Título do livro]</strong>
+                    <span>[Autor]</span>
+                    <div class="progresso" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62" aria-label="Progresso de leitura"><div style="width:62%"></div></div>
+                </div>
+            </a>
+            <a href="#" class="retomar">
+                <div class="mini-capa" style="--capa:#0D9488"></div>
+                <div class="retomar-info">
+                    <strong>[Título do audiolivro]</strong>
+                    <span>[Autor]</span>
+                    <div class="progresso" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="35" aria-label="Progresso de audição"><div style="width:35%"></div></div>
+                </div>
+            </a>
+            <a href="#" class="retomar">
+                <div class="mini-capa" style="--capa:#7C3AED"></div>
+                <div class="retomar-info">
+                    <strong>[Título do vídeo]</strong>
+                    <span>[Autor]</span>
+                    <div class="progresso" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" aria-label="Progresso do vídeo"><div style="width:80%"></div></div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="novidades" aria-labelledby="t-novidades">
+        <div class="titulo-linha">
+            <h2 id="t-novidades">Novidades na mediateca</h2>
+            <a href="catalogo.html" class="ver-tudo">Ver tudo</a>
+        </div>
+
+        <div class="grelha" id="grelha">
+            <a href="#" class="cartao" data-tipo="livros" data-titulo="[Título 1]" data-autor="[Autor]">
+                <div class="capa" style=" background-image: url('../img/imgDeLivros/10.jpeg'); background-size: cover; width: 200px;"><span class="etiqueta livros">Livro</span></div>
+                <strong>[Título 1]</strong><span>[Autor]</span>
+            </a>
+            <a href="#" class="cartao" data-tipo="livros" data-titulo="[Título 2]" data-autor="[Autor]">
+                <div class="capa" style="background-image: url(../img/imgDeLivros/11.jpeg);
+                background-position: center; background-size: cover; width: 200px;"><span class="etiqueta livros">Livro</span></div>
+                <strong>[Título 2]</strong><span>[Autor]</span>
+            </a>
+            <a href="#" class="cartao" data-tipo="audio" data-titulo="[Título 3]" data-autor="[Autor]">
+                <div class="capa" style="--capa:#0D9488"><span class="etiqueta audio">Áudio</span></div>
+                <strong>[Título 3]</strong><span>[Autor]</span>
+            </a>
+            <a href="#" class="cartao" data-tipo="video" data-titulo="[Título 4]" data-autor="[Autor]">
+                <div class="capa" style="--capa:#7C3AED"><span class="etiqueta video">Vídeo</span></div>
+                <strong>[Título 4]</strong><span>[Autor]</span>
+            </a>
+            <a href="#" class="cartao" data-tipo="imagens" data-titulo="[Título 5]" data-autor="[Autor]">
+                <div class="capa" style="--capa:#F59E0B"><span class="etiqueta imagens">Imagens</span></div>
+                <strong>[Título 5]</strong><span>[Autor]</span>
+            </a>
+            <a href="#" class="cartao" data-tipo="livros" data-titulo="[Título 6]" data-autor="[Autor]">
+                <div class="capa" style="--capa:#1E3A8A"><span class="etiqueta livros">Livro</span></div>
+                <strong>[Título 6]</strong><span>[Autor]</span>
+            </a>
+        </div>
+
+        <p class="vazio" id="vazio" hidden>Nenhum resultado encontrado. Tente outra palavra ou escolha outro tipo.</p>
+    </section>
+</main>
+
+<footer class="rodape">
+    <div class="rodape-in">
+        <span class="marca">ARCHIVA</span>
+        <div class="rodape-links">
+            <a href="sobre.html">Sobre</a>
+            <a href="ajuda.html">Ajuda</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <span>© <span id="ano">2026</span> ARCHIVA. Todos os direitos reservados.</span>
+    </div>
+</footer>
+
+<script src="js/home.js"></script>
 </body>
 </html>

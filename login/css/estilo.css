@@ -216,6 +216,13 @@ label{
     left: 3%;
     transition: all 0.5s ease;
 }
+.input-label{
+    font-size: larger;
+    position: absolute;
+    top: 28%;
+    left: 9%;
+    transition: all 0.5s ease;
+}
 .linha > label{
     font-size: larger;
     position: absolute;
@@ -283,3 +290,38 @@ input:focus{
 }
 
 
+
+/* ===== Imagens: a moldura sobe no hover e revela a foto ===== */
+.imagens { background: #FCE1EC; color: #9D174D; }
+
+.estante[data-midia="imagens"] .foto {
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.25s ease;
+}
+.estante[data-midia="imagens"] .foto:hover,
+.estante[data-midia="imagens"] .foto:focus-visible {
+    transform: translateY(-10px);
+}
+/* contorno visível para quem navega com o teclado */
+.estante[data-midia="imagens"] .foto:focus-visible > rect:nth-of-type(2) {
+    stroke: #F59E0B;
+    stroke-width: 2;
+}
+
+/* por padrão: moldura vazia (cinzenta); no hover: a imagem aparece */
+.estante[data-midia="imagens"] .vazio,
+.estante[data-midia="imagens"] .revela {
+    transition: opacity 0.25s ease;
+}
+.estante[data-midia="imagens"] .revela { opacity: 0; }
+.estante[data-midia="imagens"] .foto:hover .vazio,
+.estante[data-midia="imagens"] .foto:focus-visible .vazio { opacity: 0; }
+.estante[data-midia="imagens"] .foto:hover .revela,
+.estante[data-midia="imagens"] .foto:focus-visible .revela { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+    .estante[data-midia="imagens"] .foto,
+    .estante[data-midia="imagens"] .vazio,
+    .estante[data-midia="imagens"] .revela { transition: none; }
+}
