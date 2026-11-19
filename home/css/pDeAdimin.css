@@ -1,0 +1,36 @@
+:root{
+    --color-primario: #0a1128;
+    --color-secundario: #043056;
+    --color-trciaria: #3180b6;
+    --color-texto: #ffffff;
+    --color-fundo: #6d737d;
+    --color-boton: #083766;
+    --color-boton-hover: #1C86EE;
+    --color-error: #FF0000;
+    --color-altern:#eceff1;
+    --color-destaque: #f59e0b;
+} 
+.section1{
+    margin: 10px;
+    border-radius: 10px;
+    background-color:var(--color-texto) ;
+    width: 60vw;
+    height: 83vh;
+}
+nav{
+    display: flex;
+}
+nav a{
+    text-decoration: non;
+    color: #0a1128;
+    padding: 10px;
+}
+.aba{
+    display: none;
+}
+.aba:target{
+    display: block;
+}
+.abas:not(:has(.aba:target)) .aba:first-of-type {
+    display: block;
+}

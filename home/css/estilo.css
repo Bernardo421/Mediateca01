@@ -16,7 +16,7 @@
     --color-destaque: #f59e0b;
 } 
 body{
-    background-color: #000000;
+    background-color: var(--color-altern);
 
 }
 header{

@@ -55,6 +55,7 @@ button.etiqueta.ativa { border-color: currentColor; }
     background-color: var(--color-primario);
     color: var(--color-texto);
     padding: 0 64px 72px;
+    
 }
 .menu {
     max-width: 1312px;
@@ -63,7 +64,9 @@ button.etiqueta.ativa { border-color: currentColor; }
     display: flex;
     align-items: center;
     gap: 40px;
+   
 }
+
 .marca {
     font-size: 26px;
     font-weight: bold;

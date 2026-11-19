@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="Pt">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -181,7 +181,7 @@
             <br>
             <h3>Junte-se à comunidade ARCHIVA</h3>
 
-            <form id="form-cadastro" action="cadastro.php" method="post" novalidate>
+            <form id="form-cadastro" action="cadastro.php" method="post">
 
                 <div class="input-container">
                     <input type="text" id="nome" name="nome" placeholder=" " minlength="3" maxlength="40" autocomplete="username" required>
@@ -190,7 +190,7 @@
 
                 <div class="linha">
                     <div class="input-container fixo">
-                        <input type="date" id="nascimento" name="nascimento" required>
+                        <input type="date" id="nascimento" name="nascimento" autocomplete="bday" required>
                         <label for="nascimento">Data de nascimento</label>
                     </div>
                     <div class="input-container fixo">
@@ -210,7 +210,7 @@
                         <label for="telefone">Telefone</label>
                     </div>
                     <div class="input-container">
-                        <input type="text" id="bi" name="bi" placeholder=" " maxlength="14" style="text-transform:uppercase" required>
+                        <input type="text" id="bi" name="bi" placeholder=" " maxlength="14" pattern="\d{9}[A-Z]{2}\d{3}" required>
                         <label for="bi">Nº do BI</label>
                     </div>
                 </div>
@@ -231,7 +231,7 @@
                 </div>
                  <br>
                  <br>
-                <p class="erro-msg" id="erro" role="alert" aria-live="polite"></p>
+                
 
                 <button type="submit" class="btn-principal">Criar conta</button>
             </form>
